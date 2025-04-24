@@ -21,6 +21,10 @@ h1{
     cursor: pointer;
 }
 
+.category-list-element span:hover{
+    font-size: 18px;
+}
+
 #add-container{
     display: flex;
     flex-direction: row;
