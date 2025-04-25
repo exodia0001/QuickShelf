@@ -1,0 +1,11 @@
+{
+  "name": "QuickShelf",
+  "description": "A smart alternative to browser bookmarks. Save, categorize, and search your favorite links.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["tabs"],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "icon.png"
+  }
+}
