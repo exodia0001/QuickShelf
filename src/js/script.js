@@ -5,6 +5,23 @@ const add_btn=document.getElementById("add-btn");
 
 let existing_records = JSON.parse(localStorage.getItem("Records")) || [];
 
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const closeSidebar = document.getElementById("close-sidebar");
+    const sidebar = document.getElementById("sidebar");
+
+    function toggleSidebar(action) {
+        if (action === 'open') {
+            sidebar.classList.add("show");
+        } else if (action === 'close') {
+            sidebar.classList.remove("show");
+        }
+    }
+
+    menuToggle.addEventListener("click", () => toggleSidebar('open'));
+    closeSidebar.addEventListener("click", () => toggleSidebar('close'));
+});
+
 
 function delete_category(cat,btnElement){
     for (i=0;i<existing_records.length;i++){

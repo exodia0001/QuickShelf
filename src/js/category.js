@@ -9,7 +9,6 @@ const add_cat_btn=document.getElementById("add-cat");
 
 let existing_records = JSON.parse(localStorage.getItem("Records")) || [];
 
-
 add_cat_btn.addEventListener("click",function(){
     create_record(info);
 })
@@ -33,11 +32,7 @@ function check_if_record_isunique(title,url,category){
         }
     }
     return true;
-
-
 }
-
-
 
 function create_record(category) {
     chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
@@ -60,11 +55,6 @@ function create_record(category) {
         }
     });
 }
-
-
-
-
-
 
 function get_records_by_cat(cat){
     list_of_records.innerHTML = "";

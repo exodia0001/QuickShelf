@@ -154,3 +154,87 @@ a:link, a:visited {
     font-size: 18px;
     color: #ddd;
 }
+
+#menu-toggle {
+    background-color: transparent;
+    color: #fff;
+    font-size: 28px;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none;
+}
+
+#menu-toggle:hover {
+    color: #8C9EFF;
+    transform: scale(1.1);
+}
+
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background-color: #2C2F3B;
+    color: #E1E4EB;
+    padding-top: 70px;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#sidebar.show {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 18px 25px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    cursor: pointer;
+    border-bottom: 1px solid #3A3F50;
+    font-size: 16px;
+}
+
+#sidebar ul li:hover {
+    background-color: #3A3F50;
+    padding-left: 30px;
+}
+
+#sidebar ul li a {
+    color: #E1E4EB;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+#sidebar ul li a:hover {
+    color: #8C9EFF;
+    padding-left: 12px;
+}
+
+#close-sidebar {
+    font-size: 36px;
+    color: #E1E4EB;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#close-sidebar:hover {
+    color: #8C9EFF;
+}
