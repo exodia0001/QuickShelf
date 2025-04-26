@@ -136,6 +136,14 @@ a:link, a:visited {
     color: #ccc;
 }
 
+#search-bar{
+    margin-top: 30px;
+    width: 100%;
+    height: 26px;
+    text-align: center;
+}
+
+
 #menu-toggle {
     background-color: transparent;
     color: #ffffff;
