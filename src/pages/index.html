@@ -6,6 +6,8 @@
     <title>QuickShelf</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='../css/main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/themes/lightTheme.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../css/themes/darkTheme.css'>
 </head>
 <body>
     <button id="menu-toggle">☰</button>
@@ -13,6 +15,7 @@
         <button id="close-sidebar">×</button>
         <ul>
             <li><a href="./category.html">Categories</a></li>
+            <li><a href="#" id="theme-toggle">Toggle Theme</a></li> 
         </ul>
     </div>
     <h1>QuickShelf</h1>
@@ -24,7 +27,11 @@
         <input type="text" placeholder="New category" autocomplete="off" id="category">
         <button id="add-btn">Add</button>
     </div>
+    <footer id="footer">
+        <p>QuickShelf © 2025</p>
+    </footer>
     <script src="../js/script.js"></script>
     <script src="../js/category.js"></script>
+    <script src="../js/themes.js"></script>
 </body>
 </html>
