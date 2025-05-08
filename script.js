@@ -104,26 +104,27 @@ populate_existing_cat(existing_categorys)
 
 
 function add_category(){
-    let new_cat=category_to_add.value;
-    category_to_add.value="";
+    let new_cat=category_to_add.value.trim(); //get the input value that contains the new cat to add
+    category_to_add.value="";    //set the input text to empty
+    if (new_cat==="") return;
     if (existing_categorys.includes(new_cat)){
         console.log("Value already exists")
     }
     else{
     existing_categorys.push(new_cat);
     localStorage.setItem("Categories", JSON.stringify(existing_categorys));
-    let newli = document.createElement("li")
-    let newspan=document.createElement("span")
+    let newli = document.createElement("li");
+    let newspan=document.createElement("span");
     //newspan.classList.add("span-category")
     newspan.innerText=new_cat
     newspan.addEventListener("click",()=>{
         let category_to_pass=newspan.innerText;
         window.location.href = `category.html?data=${encodeURIComponent(category_to_pass)}`;
     })
-    let save_url_btn=document.createElement("button")
-    save_url_btn.innerText="+"
+    let save_url_btn=document.createElement("button");
+    save_url_btn.innerText="+";
     save_url_btn.addEventListener("click", () => {
-            create_record(ex_cat[i]);
+            create_record(new_cat);
         });
 
     let delete_category_btn=document.createElement("button");
@@ -146,14 +147,3 @@ function add_category(){
 }
 add_btn.onclick = add_category;
 
-
-
-
-/* chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    if (tabs.length > 0 && tabs[0].url) {
-        console.log(tabs[0].url);
-    } else {
-        console.error("Tab or URL not available");
-    }
-});
-*/
